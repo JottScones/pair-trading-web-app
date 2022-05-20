@@ -1,0 +1,14 @@
+{
+  "stocks": [
+    {
+      "ticker": "APPL",
+      "date": "2020-10-01",
+      "prices": [1,4,2]
+    },
+    {
+      "ticker": "AMZ",
+      "date": "2020-10-01",
+      "prices": [1,1,1]
+    }
+  ]
+}
