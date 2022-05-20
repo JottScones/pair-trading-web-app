@@ -18,6 +18,7 @@
 		<frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
 		<node.version>v14.8.0</node.version>
 		<yarn.version>v1.12.1</yarn.version>
+		<start-class>com.example.pairtrading.PairtradingApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -44,6 +45,10 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>

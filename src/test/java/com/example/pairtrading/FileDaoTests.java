@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 public class FileDaoTests {
-    private final static String TEST_PATH = "classpath:json/testStock.json";
+    private final static String TEST_PATH = "json/testStock.json";
     private static FileDao fileDao = new FileDao(TEST_PATH);
 
     @Test

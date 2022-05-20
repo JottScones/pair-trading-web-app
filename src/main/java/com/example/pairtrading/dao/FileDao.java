@@ -4,9 +4,12 @@ import com.example.pairtrading.model.Stock;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
 import java.io.File;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,7 +19,7 @@ import java.util.Optional;
 @Repository("file")
 public class FileDao implements StockDao {
     private JSONArray memoryStocks;
-    private String cachePath = "classpath:json/store.json";
+    private String cachePath = "json/store.json";
 
     public FileDao() {
     }
@@ -34,8 +37,8 @@ public class FileDao implements StockDao {
         try {
             // Load Cached Stocks from file
             if (memoryStocks == null) {
-                File file = ResourceUtils.getFile(cachePath);
-                String content = Files.readString(file.toPath());
+                InputStream stream = new ClassPathResource(cachePath).getInputStream();
+                String content = new String(stream.readAllBytes(), StandardCharsets.UTF_8);;
 
                 JSONObject jsonObject = new JSONObject(content);
                 memoryStocks = jsonObject.getJSONArray("stocks");
