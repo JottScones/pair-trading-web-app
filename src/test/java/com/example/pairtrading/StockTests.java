@@ -6,11 +6,10 @@ import java.util.Arrays;
 import java.util.Date;
 
 public class StockTests {
-    Date date = new Date();
     private final double[] history = {1,2,3};
     private final double[] prevSixHistory = {1, 2};
     private final double[] sixHistory = {3};
-    private final Stock testStock = new Stock("TEST", date, history);
+    private final Stock testStock = new Stock("TEST", "2020-10-10", history);
 
     @Test
     void canGetStockTickerSymbol() {

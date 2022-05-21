@@ -13,7 +13,7 @@ public class StockService {
     private final StockDao stockDao;
 
     @Autowired
-    public StockService(@Qualifier("file") StockDao stockDao) {
+    public StockService(@Qualifier("mongoDao") StockDao stockDao) {
         this.stockDao = stockDao;
     }
 

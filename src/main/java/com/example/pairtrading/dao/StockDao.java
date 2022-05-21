@@ -8,4 +8,6 @@ public interface StockDao {
     Optional<Stock> getStockWithTicker(String ticker);
 
     String[] getAllStocks();
+
+    void updateEntry(Stock stock);
 }

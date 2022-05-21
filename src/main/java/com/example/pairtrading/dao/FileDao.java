@@ -52,7 +52,6 @@ public class FileDao implements StockDao {
     public String[] getAllStocks() {
         loadMemory();
         String[] stocks = new String[memoryStocks.length()];
-        ObjectMapper objectMapper = new ObjectMapper();
 
         try {
             for (int i = 0; i < memoryStocks.length(); i++) {
@@ -65,6 +64,11 @@ public class FileDao implements StockDao {
 
 
         return stocks;
+    }
+
+    @Override
+    public void updateEntry(Stock stock) {
+        // Do nothing can't actually write to file
     }
 
     @Override
