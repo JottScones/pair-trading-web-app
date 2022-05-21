@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React from 'react';
 import StockPlot from './stockPlot';
 import MetricPlot from './metricPlot';
