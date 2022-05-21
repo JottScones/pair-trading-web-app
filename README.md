@@ -2,9 +2,9 @@
 Hosted app can be found [here](https://jottscones-pair-trading.herokuapp.com) (For best experience use large screen device)
 
 ## A small note on implementation
-The web app backend is implemented using Spring Boot and Java and the frontend is implemented using React and JavaScript.
+The web app backend is implemented using Spring Boot, Java and MongoDB. The frontend is implemented using React and JavaScript.
 The backend provides various api endpoints for the frontend to access stock data and functions. Unit tests are written using JUnit
-and are run after each push to the main branch using GitHub Actions. 
+and are run after each push to the main branch using GitHub Actions. The stock data is stored on a MongoDB Atlas cluster.
 
 ## App overview
 The pair trading strategy works by finding two stocks that are highly correlated. 
