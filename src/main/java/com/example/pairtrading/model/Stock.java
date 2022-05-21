@@ -1,11 +1,15 @@
 package com.example.pairtrading.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Arrays;
 import java.util.Date;
 
+@Document("stocks")
 public class Stock {
+    @Id
     @JsonProperty("ticker")
     private final String tickerSymbol;
 
