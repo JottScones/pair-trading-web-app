@@ -99,7 +99,6 @@ class RatioTradingChart extends Component {
   getOptions() {
     return {
       responsive: true,
-      scaleBeginAtZero: false,
       plugins: {
         legend: {
           position: 'top',

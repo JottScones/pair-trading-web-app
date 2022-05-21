@@ -31,8 +31,6 @@ class StoredPairs extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('handling submit')
-    console.log(e.target.ticker1.value)
     this.setState({
       ticker1: e.target.ticker1.value,
       ticker2: e.target.ticker2.value,

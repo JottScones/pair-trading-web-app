@@ -44,7 +44,6 @@ class PairPriceChart extends Component {
       prices2: prices2,
       labels: labels
     });
-    console.log(this.state);
   }
 
   getDates(endDate, dateNum) {
