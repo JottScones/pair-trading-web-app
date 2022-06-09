@@ -3,12 +3,9 @@ package com.example.pairtrading.dao;
 import com.example.pairtrading.datastore.StockRepository;
 import com.example.pairtrading.model.Stock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Repository("mongoDao")
